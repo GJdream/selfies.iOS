@@ -9,6 +9,7 @@
 #import "FirstViewController.h"
 
 @interface FirstViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *recentSelfie;
 
 @end
 
