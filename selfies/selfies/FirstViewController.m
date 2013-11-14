@@ -8,6 +8,8 @@
 
 #import "FirstViewController.h"
 #import "RODItemStore.h"
+#import "RODImageStore.h"
+#import "RODSelfie.h"
 
 @interface FirstViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *recentSelfie;
@@ -33,8 +35,13 @@
 {
     [super viewDidAppear:animated];
     
-    [self.recentSelfie setImage:[RODItemStore sharedStore].recentSelfie];
+    NSString *found_key = [RODItemStore sharedStore].recentSelfie.selfieKey;
     
+    if([RODItemStore sharedStore].recentSelfie) {
+        [self.recentSelfie setImage:[[RODImageStore sharedStore] imageForKey:found_key]];
+    } else {
+        NSLog(@"Was nothing.");
+    }
 }
 
 @end

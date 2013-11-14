@@ -8,6 +8,7 @@
 
 #import "SecondViewController.h"
 #import "RODItemStore.h"
+#import "RODImageStore.h"
 
 @implementation SecondViewController
 
@@ -45,11 +46,22 @@
 {
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     
-    [RODItemStore sharedStore].recentSelfie = image;
-    [self dismissViewControllerAnimated:YES completion:nil];
+    CFUUIDRef newUniqueID = CFUUIDCreate(kCFAllocatorDefault);
+    CFStringRef newUniqueIDString = CFUUIDCreateString(kCFAllocatorDefault, newUniqueID);
+    
+    NSString *key = (__bridge NSString *)newUniqueIDString;
+    
+    [[RODImageStore sharedStore] setImage:image forKey:key];
+        
+    [RODItemStore sharedStore].recentSelfie = [[RODItemStore sharedStore] createSelfie:key];
+    CFRelease(newUniqueIDString);
+    CFRelease(newUniqueID);
 
     UITabBarController *tabBarController = (UITabBarController *)self.parentViewController;
     [tabBarController setSelectedIndex:0];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 

@@ -26,9 +26,11 @@
     return allSelfies;
 }
 
-- (RODSelfie *)createSelfie
+- (RODSelfie *)createSelfie:(NSString *)key
 {
-    RODSelfie *s = [RODSelfie init];
+    RODSelfie *s = [[RODSelfie alloc] init];
+    [s setSelfieKey:key];
+    
     [allSelfies addObject:s];
     
     return s;

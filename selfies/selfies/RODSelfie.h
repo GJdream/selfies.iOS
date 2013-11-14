@@ -9,8 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface RODSelfie : NSObject
+{
+    
+}
 
-@property (nonatomic, copy) NSDate *selfieDate;
-@property (nonatomic, copy) NSString *selfieGUID;
+@property (nonatomic, strong) NSDate *selfieDate;
+@property (nonatomic, copy) NSString *selfieKey;
 
 @end

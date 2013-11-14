@@ -9,6 +9,6 @@
 #import "RODSelfie.h"
 
 @implementation RODSelfie
-
+@synthesize selfieDate, selfieKey;
 
 @end

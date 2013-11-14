@@ -15,12 +15,12 @@
     NSMutableArray *allSelfies;
 }
 
-@property (nonatomic, copy) UIImage *recentSelfie;
+@property (nonatomic, retain) RODSelfie *recentSelfie;
 
 + (RODItemStore *)sharedStore;
 
 - (NSArray *)allSelfies;
-- (RODSelfie *)createSelfie;
+- (RODSelfie *)createSelfie:(NSString *)key;
 
 @end
 

@@ -24,6 +24,7 @@
 		5D991B3618341C2600428004 /* selfiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D991B3518341C2600428004 /* selfiesTests.m */; };
 		5D991B411835476100428004 /* RODItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D991B401835476100428004 /* RODItemStore.m */; };
 		5D991B44183549D000428004 /* RODSelfie.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D991B43183549D000428004 /* RODSelfie.m */; };
+		5D991B471835602D00428004 /* RODImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D991B461835602D00428004 /* RODImageStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		5D991B401835476100428004 /* RODItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RODItemStore.m; sourceTree = "<group>"; };
 		5D991B42183549D000428004 /* RODSelfie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RODSelfie.h; sourceTree = "<group>"; };
 		5D991B43183549D000428004 /* RODSelfie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RODSelfie.m; sourceTree = "<group>"; };
+		5D991B451835602D00428004 /* RODImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RODImageStore.h; sourceTree = "<group>"; };
+		5D991B461835602D00428004 /* RODImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RODImageStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +137,8 @@
 				5D991B401835476100428004 /* RODItemStore.m */,
 				5D991B42183549D000428004 /* RODSelfie.h */,
 				5D991B43183549D000428004 /* RODSelfie.m */,
+				5D991B451835602D00428004 /* RODImageStore.h */,
+				5D991B461835602D00428004 /* RODImageStore.m */,
 			);
 			path = selfies;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D991B471835602D00428004 /* RODImageStore.m in Sources */,
 				5D991B411835476100428004 /* RODItemStore.m in Sources */,
 				5D991B44183549D000428004 /* RODSelfie.m in Sources */,
 				5D991B2118341C2600428004 /* SecondViewController.m in Sources */,
