@@ -15,7 +15,16 @@
 {
     self = [super init];
     if (self) {
-        allSelfies = [[NSMutableArray alloc] init];
+        
+        NSString *path = [self itemArchivePath];
+        allSelfies = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+        
+        if(!allSelfies)
+            allSelfies = [[NSMutableArray alloc] init];
+        
+        NSLog(@"Loaded selfies: %d", [allSelfies count]);
+
+        self.recentSelfie = [allSelfies lastObject];
     }
     
     return self;
@@ -36,6 +45,20 @@
     return s;
 }
 
+- (NSString *)itemArchivePath
+{
+    NSArray *documentDirectories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDirectory = [documentDirectories objectAtIndex:0];
+    
+    return [documentDirectory stringByAppendingPathComponent:@"items.archive"];
+}
+
+- (BOOL)saveChanges
+{    
+    NSString *path = [self itemArchivePath];
+    return [NSKeyedArchiver archiveRootObject:allSelfies toFile:path];
+}
+
 + (RODItemStore *)sharedStore
 {
     static RODItemStore *sharedStore = nil;
@@ -50,5 +73,7 @@
 {
     return [self sharedStore];
 }
+
+
 
 @end

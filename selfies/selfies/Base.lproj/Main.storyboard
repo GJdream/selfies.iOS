@@ -46,6 +46,7 @@
                     <tabBarItem key="tabBarItem" title="home" image="first" id="u1e-5L-l1D"/>
                     <connections>
                         <outlet property="recentSelfie" destination="Wir-6Z-3bE" id="htw-6a-GjK"/>
+                        <outlet property="recentSelfieLabel" destination="Zhg-ve-WU7" id="bcV-XL-8zh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>

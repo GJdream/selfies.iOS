@@ -22,5 +22,10 @@
 - (NSArray *)allSelfies;
 - (RODSelfie *)createSelfie:(NSString *)key;
 
+- (NSString *)itemArchivePath;
+
+- (BOOL)saveChanges;
+
+
 @end
 

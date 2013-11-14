@@ -13,6 +13,7 @@
 
 @interface FirstViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *recentSelfie;
+@property (weak, nonatomic) IBOutlet UILabel *recentSelfieLabel;
 
 @end
 
@@ -39,6 +40,10 @@
     
     if([RODItemStore sharedStore].recentSelfie) {
         [self.recentSelfie setImage:[[RODImageStore sharedStore] imageForKey:found_key]];
+        
+        NSInteger selfie_count = [[[RODItemStore sharedStore] allSelfies] count];
+        [self.recentSelfieLabel setText:[NSString stringWithFormat:@"selfie %d of %d", selfie_count, selfie_count]];
+        
     } else {
         NSLog(@"Was nothing.");
     }
