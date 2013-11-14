@@ -15,6 +15,8 @@
     NSMutableArray *allSelfies;
 }
 
+@property (nonatomic, copy) UIImage *recentSelfie;
+
 + (RODItemStore *)sharedStore;
 
 - (NSArray *)allSelfies;

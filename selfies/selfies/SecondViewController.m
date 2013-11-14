@@ -7,6 +7,7 @@
 //
 
 #import "SecondViewController.h"
+#import "RODItemStore.h"
 
 @implementation SecondViewController
 
@@ -44,7 +45,11 @@
 {
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     
-    
+    [RODItemStore sharedStore].recentSelfie = image;
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+    UITabBarController *tabBarController = (UITabBarController *)self.parentViewController;
+    [tabBarController setSelectedIndex:0];
 }
 
 

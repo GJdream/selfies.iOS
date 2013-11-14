@@ -32,12 +32,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Zhg-ve-WU7" firstAttribute="leading" secondItem="Wir-6Z-3bE" secondAttribute="leading" id="4RF-RJ-X4V"/>
+                            <constraint firstItem="Zhg-ve-WU7" firstAttribute="top" secondItem="2VE-Yg-loa" secondAttribute="top" constant="26" id="HSP-j3-80z"/>
                             <constraint firstItem="Zhg-ve-WU7" firstAttribute="top" secondItem="Srp-S5-gH5" secondAttribute="bottom" constant="6" id="IZ5-Bm-Edv"/>
                             <constraint firstAttribute="trailing" secondItem="Wir-6Z-3bE" secondAttribute="trailing" constant="20" symbolic="YES" id="IeT-LA-jA0"/>
                             <constraint firstItem="Zhg-ve-WU7" firstAttribute="leading" secondItem="2VE-Yg-loa" secondAttribute="leading" constant="15" id="JQj-gp-vk2"/>
                             <constraint firstAttribute="bottom" secondItem="Wir-6Z-3bE" secondAttribute="bottom" constant="57" id="Xxu-bf-ai3"/>
                             <constraint firstItem="Wir-6Z-3bE" firstAttribute="top" secondItem="Zhg-ve-WU7" secondAttribute="bottom" constant="8" symbolic="YES" id="bzo-0M-T6i"/>
                             <constraint firstAttribute="trailing" secondItem="Zhg-ve-WU7" secondAttribute="trailing" constant="25" id="eHs-J5-0HT"/>
+                            <constraint firstItem="Wir-6Z-3bE" firstAttribute="top" secondItem="2VE-Yg-loa" secondAttribute="top" constant="53" id="lnN-z9-den"/>
                             <constraint firstItem="kj5-M5-Ka6" firstAttribute="top" secondItem="Wir-6Z-3bE" secondAttribute="bottom" constant="8" id="rze-6w-gpu"/>
                         </constraints>
                     </view>
