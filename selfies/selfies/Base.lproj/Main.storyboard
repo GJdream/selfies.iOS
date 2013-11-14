@@ -36,7 +36,6 @@
                             <constraint firstItem="Zhg-ve-WU7" firstAttribute="top" secondItem="Srp-S5-gH5" secondAttribute="bottom" constant="6" id="IZ5-Bm-Edv"/>
                             <constraint firstAttribute="trailing" secondItem="Wir-6Z-3bE" secondAttribute="trailing" constant="20" symbolic="YES" id="IeT-LA-jA0"/>
                             <constraint firstItem="Zhg-ve-WU7" firstAttribute="leading" secondItem="2VE-Yg-loa" secondAttribute="leading" constant="15" id="JQj-gp-vk2"/>
-                            <constraint firstAttribute="bottom" secondItem="Wir-6Z-3bE" secondAttribute="bottom" constant="57" id="Xxu-bf-ai3"/>
                             <constraint firstItem="Wir-6Z-3bE" firstAttribute="top" secondItem="Zhg-ve-WU7" secondAttribute="bottom" constant="8" symbolic="YES" id="bzo-0M-T6i"/>
                             <constraint firstAttribute="trailing" secondItem="Zhg-ve-WU7" secondAttribute="trailing" constant="25" id="eHs-J5-0HT"/>
                             <constraint firstItem="Wir-6Z-3bE" firstAttribute="top" secondItem="2VE-Yg-loa" secondAttribute="top" constant="53" id="lnN-z9-den"/>
@@ -80,7 +79,7 @@
                                 <fontDescription key="fontDescription" type="system" size="system"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLb-Z3-hE1">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLb-Z3-hE1">
                                 <rect key="frame" x="86" y="264" width="148" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="take selfie"/>
@@ -95,11 +94,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="29h-N2-YGT" firstAttribute="leading" secondItem="gMD-aP-Fq6" secondAttribute="leading" constant="20" symbolic="YES" id="4te-rk-9Fp"/>
+                            <constraint firstItem="ZLb-Z3-hE1" firstAttribute="leading" secondItem="gMD-aP-Fq6" secondAttribute="leading" constant="86" id="8mX-DW-boH"/>
+                            <constraint firstItem="ZLb-Z3-hE1" firstAttribute="centerX" secondItem="DcM-Fx-MKR" secondAttribute="centerX" id="ELF-pT-fxi"/>
                             <constraint firstAttribute="trailing" secondItem="29h-N2-YGT" secondAttribute="trailing" constant="20" symbolic="YES" id="FIx-Zl-RBr"/>
                             <constraint firstItem="DcM-Fx-MKR" firstAttribute="top" secondItem="29h-N2-YGT" secondAttribute="bottom" constant="8" id="Gb1-a9-eY8"/>
+                            <constraint firstItem="VyR-Zq-KtB" firstAttribute="top" secondItem="ZLb-Z3-hE1" secondAttribute="bottom" constant="191" id="Ifl-aa-WNT"/>
                             <constraint firstAttribute="trailing" secondItem="DcM-Fx-MKR" secondAttribute="trailing" constant="20" symbolic="YES" id="XTh-ji-q0k"/>
                             <constraint firstItem="DcM-Fx-MKR" firstAttribute="leading" secondItem="gMD-aP-Fq6" secondAttribute="leading" constant="20" symbolic="YES" id="l9f-S9-V20"/>
                             <constraint firstAttribute="centerY" secondItem="DcM-Fx-MKR" secondAttribute="centerY" constant="32" id="lHZ-e8-ii2"/>
+                            <constraint firstItem="ZLb-Z3-hE1" firstAttribute="top" secondItem="29h-N2-YGT" secondAttribute="bottom" constant="64" id="ukk-YZ-yfd"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="camera" image="second" id="Z7h-1E-pvt"/>
