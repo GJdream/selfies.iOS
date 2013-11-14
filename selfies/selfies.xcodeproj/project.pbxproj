@@ -22,6 +22,8 @@
 		5D991B2C18341C2600428004 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D991B0B18341C2600428004 /* UIKit.framework */; };
 		5D991B3418341C2600428004 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D991B3218341C2600428004 /* InfoPlist.strings */; };
 		5D991B3618341C2600428004 /* selfiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D991B3518341C2600428004 /* selfiesTests.m */; };
+		5D991B411835476100428004 /* RODItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D991B401835476100428004 /* RODItemStore.m */; };
+		5D991B44183549D000428004 /* RODSelfie.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D991B43183549D000428004 /* RODSelfie.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,10 @@
 		5D991B3118341C2600428004 /* selfiesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "selfiesTests-Info.plist"; sourceTree = "<group>"; };
 		5D991B3318341C2600428004 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5D991B3518341C2600428004 /* selfiesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = selfiesTests.m; sourceTree = "<group>"; };
+		5D991B3F1835476100428004 /* RODItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RODItemStore.h; sourceTree = "<group>"; };
+		5D991B401835476100428004 /* RODItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RODItemStore.m; sourceTree = "<group>"; };
+		5D991B42183549D000428004 /* RODSelfie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RODSelfie.h; sourceTree = "<group>"; };
+		5D991B43183549D000428004 /* RODSelfie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RODSelfie.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +130,10 @@
 				5D991B2018341C2600428004 /* SecondViewController.m */,
 				5D991B2218341C2600428004 /* Images.xcassets */,
 				5D991B0E18341C2600428004 /* Supporting Files */,
+				5D991B3F1835476100428004 /* RODItemStore.h */,
+				5D991B401835476100428004 /* RODItemStore.m */,
+				5D991B42183549D000428004 /* RODSelfie.h */,
+				5D991B43183549D000428004 /* RODSelfie.m */,
 			);
 			path = selfies;
 			sourceTree = "<group>";
@@ -254,6 +264,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D991B411835476100428004 /* RODItemStore.m in Sources */,
+				5D991B44183549D000428004 /* RODSelfie.m in Sources */,
 				5D991B2118341C2600428004 /* SecondViewController.m in Sources */,
 				5D991B1818341C2600428004 /* AppDelegate.m in Sources */,
 				5D991B1E18341C2600428004 /* FirstViewController.m in Sources */,
