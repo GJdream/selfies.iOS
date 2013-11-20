@@ -7,6 +7,7 @@
 //
 
 #import "RODItemStore.h"
+#import "RODImageStore.h"
 #import "RODSelfie.h"
 
 @implementation RODItemStore
@@ -24,6 +25,9 @@
         
         NSLog(@"Loaded selfies: %d", [allSelfies count]);
 
+        self.currentSelfieIndex = [allSelfies count] - 1;
+        NSLog(@"currentSelfieIndex init: %d", self.currentSelfieIndex);
+        
         self.recentSelfie = [allSelfies lastObject];
     }
     
@@ -42,7 +46,19 @@
     
     [allSelfies addObject:s];
     
+    [self saveChanges];
+    
     return s;
+}
+
+- (void)removeSelfie:(NSInteger)index
+{
+    NSString *key = [(RODSelfie *)[allSelfies objectAtIndex:index] selfieKey];
+    [[RODImageStore sharedStore] deleteImageForKey:key];
+    
+    [allSelfies removeObjectAtIndex:index];
+    
+    [self saveChanges];
 }
 
 - (NSString *)itemArchivePath

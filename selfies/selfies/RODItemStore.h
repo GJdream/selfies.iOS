@@ -15,12 +15,14 @@
     NSMutableArray *allSelfies;
 }
 
+@property (nonatomic) NSInteger currentSelfieIndex;
 @property (nonatomic, retain) RODSelfie *recentSelfie;
 
 + (RODItemStore *)sharedStore;
 
 - (NSArray *)allSelfies;
 - (RODSelfie *)createSelfie:(NSString *)key;
+- (void) removeSelfie:(NSInteger)index;
 
 - (NSString *)itemArchivePath;
 

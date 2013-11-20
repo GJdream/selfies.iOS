@@ -405,6 +405,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "selfies/selfies-Prefix.pch";
 				INFOPLIST_FILE = "selfies/selfies-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -418,6 +419,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "selfies/selfies-Prefix.pch";
 				INFOPLIST_FILE = "selfies/selfies-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -484,6 +486,7 @@
 				5D991B3B18341C2600428004 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5D991B3C18341C2600428004 /* Build configuration list for PBXNativeTarget "selfiesTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +495,7 @@
 				5D991B3E18341C2600428004 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

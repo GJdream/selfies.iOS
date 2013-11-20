@@ -54,6 +54,8 @@
     [[RODImageStore sharedStore] setImage:image forKey:key];
         
     [RODItemStore sharedStore].recentSelfie = [[RODItemStore sharedStore] createSelfie:key];
+    [RODItemStore sharedStore].currentSelfieIndex = [[[RODItemStore sharedStore] allSelfies] count] - 1;
+    
     CFRelease(newUniqueIDString);
     CFRelease(newUniqueID);
 
