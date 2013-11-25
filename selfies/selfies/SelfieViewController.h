@@ -10,5 +10,7 @@
 
 @interface SelfieViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *selfieImageView;
+@property (weak, nonatomic) IBOutlet UIButton *deleteButton;
+@property (weak, nonatomic) IBOutlet UIButton *uploadButton;
 
 @end

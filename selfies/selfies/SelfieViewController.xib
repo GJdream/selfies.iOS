@@ -6,7 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelfieViewController">
             <connections>
+                <outlet property="deleteButton" destination="zHc-Vv-HuJ" id="sfL-WA-66t"/>
                 <outlet property="selfieImageView" destination="me4-oc-PMt" id="Bmn-rc-Jhs"/>
+                <outlet property="uploadButton" destination="cmn-zw-ViB" id="M14-2z-uB6"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>

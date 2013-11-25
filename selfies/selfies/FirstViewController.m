@@ -57,11 +57,14 @@
     NSLog(@"loadSelfieImages called.");
     
     int yOffset = 0;
+    int selfie_index = 0;
     int selfie_view_height = 0;
     
     SelfieViewController *svc;
     
     for(int i = 0; i < [[[RODItemStore sharedStore] allSelfies] count]; i++) {
+        
+        selfie_index++;
         
         RODSelfie *full_selfie = [[[RODItemStore sharedStore] allSelfies] objectAtIndex:i];
         
@@ -76,11 +79,13 @@
         NSString *found_key = full_selfie.selfieKey;
         
         [svc.selfieImageView setImage:[[RODImageStore sharedStore] imageForKey:found_key]];
-        
-        //[scv.labelHearts setUserInteractionEnabled:true];
-        //UITapGestureRecognizer *tapHearts = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickedHeart:)];
-        //[scv.labelHearts addGestureRecognizer:tapHearts];
-        //[scv.btnHearts addTarget:self action:@selector(btnHeartClicked:) forControlEvents:UIControlEventTouchUpInside];
+
+        [svc.deleteButton setTag:selfie_index + 1000];
+        [svc.uploadButton setTag:selfie_index + 5000];
+
+        [svc.deleteButton setUserInteractionEnabled:true];
+        UITapGestureRecognizer *tapDelete = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickedDelete:)];
+        [svc.deleteButton addGestureRecognizer:tapDelete];
         
         yOffset = yOffset + selfie_view_height;
         
@@ -89,6 +94,13 @@
     }
     
     [self.selfieScrollView setContentSize:CGSizeMake(self.view.bounds.size.width, yOffset)];
+    
+}
+
+-(void)clickedDelete:(UITapGestureRecognizer *)tapGesture
+{
+    NSNumber *selfie_index = [NSNumber numberWithInt:[tapGesture.view tag] - 1000];
+    NSLog(@"Clicked %@", selfie_index);
     
 }
 
