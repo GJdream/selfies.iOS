@@ -10,10 +10,10 @@
 #import "RODItemStore.h"
 #import "RODImageStore.h"
 #import "RODSelfie.h"
+#import "SelfieViewController.h"
 
 @interface FirstViewController ()
-@property (weak, nonatomic) IBOutlet UIImageView *recentSelfie;
-@property (weak, nonatomic) IBOutlet UILabel *recentSelfieLabel;
+@property (weak, nonatomic) IBOutlet UIScrollView *selfieScrollView;
 - (IBAction)goBack:(id)sender;
 - (IBAction)goForward:(id)sender;
 - (IBAction)trash:(id)sender;
@@ -27,6 +27,15 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    
+    // we want to loop through all the selfies
+    // create a new view controller for each one
+    // then add it to the scrollview
+    
+    [self setEdgesForExtendedLayout:UIRectEdgeNone];
+    
+    [self loadSelfieImages];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,11 +48,48 @@
 {
     [super viewDidAppear:animated];
     
-    if([RODItemStore sharedStore].recentSelfie) {
-        [self loadImage];
-    } else {
-        NSLog(@"Was nothing.");
+    [self loadSelfieImages];
+    
+}
+
+- (void)loadSelfieImages {
+    
+    NSLog(@"loadSelfieImages called.");
+    
+    int yOffset = 0;
+    int selfie_view_height = 0;
+    
+    SelfieViewController *svc;
+    
+    for(int i = 0; i < [[[RODItemStore sharedStore] allSelfies] count]; i++) {
+        
+        RODSelfie *full_selfie = [[[RODItemStore sharedStore] allSelfies] objectAtIndex:i];
+        
+        int selfie_height = self.view.bounds.size.height - 20;
+        
+        selfie_view_height = selfie_height;
+        
+        svc = [[SelfieViewController alloc] init];
+        
+        svc.view.frame = CGRectMake(0, yOffset, self.view.bounds.size.width - 5, selfie_view_height);
+        
+        NSString *found_key = full_selfie.selfieKey;
+        
+        [svc.selfieImageView setImage:[[RODImageStore sharedStore] imageForKey:found_key]];
+        
+        //[scv.labelHearts setUserInteractionEnabled:true];
+        //UITapGestureRecognizer *tapHearts = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickedHeart:)];
+        //[scv.labelHearts addGestureRecognizer:tapHearts];
+        //[scv.btnHearts addTarget:self action:@selector(btnHeartClicked:) forControlEvents:UIControlEventTouchUpInside];
+        
+        yOffset = yOffset + selfie_view_height;
+        
+        [self.selfieScrollView addSubview:svc.view];
+        
     }
+    
+    [self.selfieScrollView setContentSize:CGSizeMake(self.view.bounds.size.width, yOffset)];
+    
 }
 
 - (IBAction)goBack:(id)sender {
@@ -93,10 +139,7 @@
     
     NSString *found_key = [RODItemStore sharedStore].recentSelfie.selfieKey;
     
-    [self.recentSelfie setImage:[[RODImageStore sharedStore] imageForKey:found_key]];
-    
     NSInteger selfie_count = [[[RODItemStore sharedStore] allSelfies] count];
-    [self.recentSelfieLabel setText:[NSString stringWithFormat:@"selfie %d of %d", [RODItemStore sharedStore].currentSelfieIndex + 1, selfie_count]];
     
 }
 @end

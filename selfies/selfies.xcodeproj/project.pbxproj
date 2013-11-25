@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5C4E7083D837492E92FDF2D4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D29262D6EA62453395E421E4 /* libPods.a */; };
 		5D799D01183D8647000AB97A /* RKPostSelfie.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D799D00183D8647000AB97A /* RKPostSelfie.m */; };
+		5D799D051843D2BC000AB97A /* SelfieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D799D031843D2BC000AB97A /* SelfieViewController.m */; };
+		5D799D061843D2BC000AB97A /* SelfieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D799D041843D2BC000AB97A /* SelfieViewController.xib */; };
 		5D991B0818341C2600428004 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D991B0718341C2600428004 /* Foundation.framework */; };
 		5D991B0A18341C2600428004 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D991B0918341C2600428004 /* CoreGraphics.framework */; };
 		5D991B0C18341C2600428004 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D991B0B18341C2600428004 /* UIKit.framework */; };
@@ -42,6 +44,9 @@
 /* Begin PBXFileReference section */
 		5D799CFF183D8647000AB97A /* RKPostSelfie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKPostSelfie.h; sourceTree = "<group>"; };
 		5D799D00183D8647000AB97A /* RKPostSelfie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKPostSelfie.m; sourceTree = "<group>"; };
+		5D799D021843D2BC000AB97A /* SelfieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfieViewController.h; sourceTree = "<group>"; };
+		5D799D031843D2BC000AB97A /* SelfieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfieViewController.m; sourceTree = "<group>"; };
+		5D799D041843D2BC000AB97A /* SelfieViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelfieViewController.xib; sourceTree = "<group>"; };
 		5D991B0418341C2600428004 /* selfies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = selfies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D991B0718341C2600428004 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5D991B0918341C2600428004 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -150,6 +155,9 @@
 				5D991B43183549D000428004 /* RODSelfie.m */,
 				5D991B451835602D00428004 /* RODImageStore.h */,
 				5D991B461835602D00428004 /* RODImageStore.m */,
+				5D799D021843D2BC000AB97A /* SelfieViewController.h */,
+				5D799D031843D2BC000AB97A /* SelfieViewController.m */,
+				5D799D041843D2BC000AB97A /* SelfieViewController.xib */,
 			);
 			path = selfies;
 			sourceTree = "<group>";
@@ -261,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D799D061843D2BC000AB97A /* SelfieViewController.xib in Resources */,
 				5D991B2318341C2600428004 /* Images.xcassets in Resources */,
 				5D991B1218341C2600428004 /* InfoPlist.strings in Resources */,
 				5D991B1B18341C2600428004 /* Main.storyboard in Resources */,
@@ -319,6 +328,7 @@
 				5D991B471835602D00428004 /* RODImageStore.m in Sources */,
 				5D991B411835476100428004 /* RODItemStore.m in Sources */,
 				5D991B44183549D000428004 /* RODSelfie.m in Sources */,
+				5D799D051843D2BC000AB97A /* SelfieViewController.m in Sources */,
 				5D991B2118341C2600428004 /* SecondViewController.m in Sources */,
 				5D991B1818341C2600428004 /* AppDelegate.m in Sources */,
 				5D991B1E18341C2600428004 /* FirstViewController.m in Sources */,
