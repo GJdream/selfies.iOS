@@ -55,6 +55,11 @@
 - (void)loadSelfieImages {
     
     NSLog(@"loadSelfieImages called.");
+
+    // remove existing content
+    for (UIView *subview in self.selfieScrollView.subviews) {
+        [subview removeFromSuperview];
+    }
     
     int yOffset = 0;
     int selfie_index = 0;
@@ -63,8 +68,6 @@
     SelfieViewController *svc;
     
     for(int i = 0; i < [[[RODItemStore sharedStore] allSelfies] count]; i++) {
-        
-        selfie_index++;
         
         RODSelfie *full_selfie = [[[RODItemStore sharedStore] allSelfies] objectAtIndex:i];
         
@@ -91,6 +94,7 @@
         
         [self.selfieScrollView addSubview:svc.view];
         
+        selfie_index++;
     }
     
     [self.selfieScrollView setContentSize:CGSizeMake(self.view.bounds.size.width, yOffset)];
@@ -101,6 +105,8 @@
 {
     NSNumber *selfie_index = [NSNumber numberWithInt:[tapGesture.view tag] - 1000];
     NSLog(@"Clicked %@", selfie_index);
+    [[RODItemStore sharedStore] removeSelfie:[selfie_index integerValue]];
+    [self loadSelfieImages];
     
 }
 
