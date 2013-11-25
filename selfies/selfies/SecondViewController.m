@@ -9,6 +9,8 @@
 #import "SecondViewController.h"
 #import "RODItemStore.h"
 #import "RODImageStore.h"
+#import <RestKit.h>
+#import "RKPostSelfie.h"
 
 @implementation SecondViewController
 
@@ -63,6 +65,32 @@
     [tabBarController setSelectedIndex:0];
     
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+    // upload now lol
+    
+//    RKObjectMapping *responseMapping = [RKObjectMapping mappingForClass:[RKPostSelfie class]];
+//    [responseMapping addAttributeMappingsFromArray:@[@"title", @"author", @"body"]];
+//    NSIndexSet *statusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful); // Anything in 2xx
+//    RKResponseDescriptor *articleDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:responseMapping method:RKRequestMethodAny pathPattern:@"/articles" keyPath:@"article" statusCodes:statusCodes];
+//    
+//    RKObjectMapping *requestMapping = [RKObjectMapping requestMapping]; // objectClass == NSMutableDictionary
+//    [requestMapping addAttributeMappingsFromArray:@[@"title", @"author", @"body"]];
+//    
+//    // For any object of class Article, serialize into an NSMutableDictionary using the given mapping and nest
+//    // under the 'article' key path
+//    RKRequestDescriptor *requestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:requestMapping objectClass:[Article class] rootKeyPath:@"article" method:RKRequestMethodAny];
+//    
+//    RKObjectManager *manager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"http://restkit.org"];
+//                                [manager addRequestDescriptor:requestDescriptor];
+//                                [manager addResponseDescriptor:articleDescriptor];
+//                                
+//                                Article *article = [Article new];
+//                                article.title = @"Introduction to RestKit";
+//                                article.body = @"This is some text.";
+//                                article.author = @"Blake";
+//                                
+//                                // POST to create
+//                                [manager postObject:article path:@"/articles" parameters:nil success:nil failure:nil];
     
 }
 

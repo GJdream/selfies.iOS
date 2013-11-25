@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C4E7083D837492E92FDF2D4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D29262D6EA62453395E421E4 /* libPods.a */; };
+		5D799D01183D8647000AB97A /* RKPostSelfie.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D799D00183D8647000AB97A /* RKPostSelfie.m */; };
 		5D991B0818341C2600428004 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D991B0718341C2600428004 /* Foundation.framework */; };
 		5D991B0A18341C2600428004 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D991B0918341C2600428004 /* CoreGraphics.framework */; };
 		5D991B0C18341C2600428004 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D991B0B18341C2600428004 /* UIKit.framework */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D799CFF183D8647000AB97A /* RKPostSelfie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKPostSelfie.h; sourceTree = "<group>"; };
+		5D799D00183D8647000AB97A /* RKPostSelfie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKPostSelfie.m; sourceTree = "<group>"; };
 		5D991B0418341C2600428004 /* selfies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = selfies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D991B0718341C2600428004 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5D991B0918341C2600428004 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -65,6 +69,8 @@
 		5D991B43183549D000428004 /* RODSelfie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RODSelfie.m; sourceTree = "<group>"; };
 		5D991B451835602D00428004 /* RODImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RODImageStore.h; sourceTree = "<group>"; };
 		5D991B461835602D00428004 /* RODImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RODImageStore.m; sourceTree = "<group>"; };
+		D29262D6EA62453395E421E4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE4CA202C3904B099361A2EA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,7 @@
 				5D991B0A18341C2600428004 /* CoreGraphics.framework in Frameworks */,
 				5D991B0C18341C2600428004 /* UIKit.framework in Frameworks */,
 				5D991B0818341C2600428004 /* Foundation.framework in Frameworks */,
+				5C4E7083D837492E92FDF2D4 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +105,7 @@
 				5D991B2F18341C2600428004 /* selfiesTests */,
 				5D991B0618341C2600428004 /* Frameworks */,
 				5D991B0518341C2600428004 /* Products */,
+				EE4CA202C3904B099361A2EA /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +125,7 @@
 				5D991B0918341C2600428004 /* CoreGraphics.framework */,
 				5D991B0B18341C2600428004 /* UIKit.framework */,
 				5D991B2918341C2600428004 /* XCTest.framework */,
+				D29262D6EA62453395E421E4 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -131,6 +140,8 @@
 				5D991B1D18341C2600428004 /* FirstViewController.m */,
 				5D991B1F18341C2600428004 /* SecondViewController.h */,
 				5D991B2018341C2600428004 /* SecondViewController.m */,
+				5D799CFF183D8647000AB97A /* RKPostSelfie.h */,
+				5D799D00183D8647000AB97A /* RKPostSelfie.m */,
 				5D991B2218341C2600428004 /* Images.xcassets */,
 				5D991B0E18341C2600428004 /* Supporting Files */,
 				5D991B3F1835476100428004 /* RODItemStore.h */,
@@ -179,9 +190,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D991B3918341C2600428004 /* Build configuration list for PBXNativeTarget "selfies" */;
 			buildPhases = (
+				3DEED31A28464F2D9F643E62 /* Check Pods Manifest.lock */,
 				5D991B0018341C2600428004 /* Sources */,
 				5D991B0118341C2600428004 /* Frameworks */,
 				5D991B0218341C2600428004 /* Resources */,
+				59950AB115124F3FA472098B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,11 +277,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3DEED31A28464F2D9F643E62 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		59950AB115124F3FA472098B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5D991B0018341C2600428004 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D799D01183D8647000AB97A /* RKPostSelfie.m in Sources */,
 				5D991B471835602D00428004 /* RODImageStore.m in Sources */,
 				5D991B411835476100428004 /* RODItemStore.m in Sources */,
 				5D991B44183549D000428004 /* RODSelfie.m in Sources */,
@@ -399,20 +446,25 @@
 		};
 		5D991B3A18341C2600428004 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE4CA202C3904B099361A2EA /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Seth Hayward (3LDR3NFF35)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Seth Hayward (3LDR3NFF35)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "selfies/selfies-Prefix.pch";
 				INFOPLIST_FILE = "selfies/selfies-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6B8B0E67-EB59-4126-B7AB-8DA87C12460C";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		5D991B3B18341C2600428004 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE4CA202C3904B099361A2EA /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -421,6 +473,7 @@
 				INFOPLIST_FILE = "selfies/selfies-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6B8B0E67-EB59-4126-B7AB-8DA87C12460C";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
